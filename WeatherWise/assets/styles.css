@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  --colorDark1: #112d4e;
+  --colorDark2: #3f72af;
+  --colorLight1: #dbe2ef;
+  --colorLight2: #f9f7f7;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  color: var(--colorLight2);
+  background-image: url(images/wallpaper.png);
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+.tab-container {
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  cursor: pointer;
+  font-size: 0.875rem;
+  letter-spacing: 0.75px;
+  padding: 5px 8px;
+}
+.tab.current-tab {
+  background-color: rgba(219, 226, 239, 0.5);
+  border-radius: 4px;
+}
+
+.weather-container {
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  all: unset;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.search-container img {
+  position: absolute;
+  left: 25%;
+  bottom: 25%;
+  background: none;
+}
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-access {
+  display: none;
+}
+.location-access.active {
+  display: flex;
+}
+
+.location-access img {
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.location-access p:last-of-type {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.75rem;
+}
+
+.loading-container {
+  display: none;
+}
+
+.loading-container.active {
+  display: flex;
+}
+
+.loading-container p {
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+.weather {
+  display: none;
+}
+
+.weather.active {
+  display: flex;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.name p {
+  font-size: 2rem;
+}
+
+.name img {
+  width: 30px;
+  height: 30px;
+}
+
+.weather p[weather-type] {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.weather img[weather-img] {
+  width: 90px;
+  height: 90px;
+}
+
+.weather p[temp] {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 20px;
+  margin-top: 2rem;
+}
+
+.info {
+  width: 30%;
+  max-width: 200px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  gap: 5px 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info img {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+}
+.info p:first-of-type {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: black;
+  text-transform: uppercase;
+}
+.info p:last-of-type {
+  font-size: 1rem;
+  font-weight: 200;
+  color: black;
+  text-transform: uppercase;
+}
+.search-container {
+  display: none;
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  margin-bottom: 3rem;
+}
+.search-container.active {
+  display: flex;
+}
+
+.search-container input {
+  width: calc(100% - 80px);
+  height: 40px;
+  padding: 0 20px;
+  background-color: rgba(219, 226, 239, 0.5);
+  border-radius: 10px;
+}
+
+.search-container input::placeholder {
+  color: whitesmoke;
+}
+
+.search-container .btn {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  padding: unset;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-bottom: 1px;
+}
+
+.design {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 30px;
+  }
+  .name {
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .name p {
+    font-size: 1.5rem;
+  }
+  .name img {
+    width: 18px;
+    height: 18px;
+  }
+  .weather p[weather-type] {
+    font-size: 1.15rem;
+    font-weight: 200;
+  }
+  .weather img[weather-img] {
+    width: 50px;
+    height: 50px;
+  }
+  .weather p[temp] {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .weather-info {
+    display: flex;
+    gap: 15px;
+  }
+  .info img {
+    width: 40px;
+    height: 40px;
+  }
+  .info p:first-of-type {
+    font-size: 1rem;
+  }
+}

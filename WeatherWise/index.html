@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <title>Weather Wise</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1> !! Weather Wise !!</h1>
+        <div class="tab-container">
+            <p class="tab" user-weather> My Weather :: </p>
+            <p class="tab" search-weather> Search Weather :: </p>
+        </div>
+        <div class="weather-container">
+
+            <!-- location access -->
+            <div class="sub-container location-access">
+                <button class="design">
+                    <img src="assets/images/location.png" height="150" width="150" loading="lazy">
+                </button>
+                <p>Grant Location Access</p>
+                <p>Allow Access To Get Weather Info </p>
+                <button class="btn" grant-access>Grant Access</button>
+            </div>
+
+            <!-- Search Section  -->
+            <form class="search-container">
+                <input placeholder="Search Location!!!" search-innput>
+                <button class="btn">
+                    <img src="assets/images/search.webp" height="20" width="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- loading section  -->
+
+            <div class="sub-container loading-container">
+                <img src="assets/images/location.png" height="150" width="150">
+                <p> !!!loading!!! </p>
+            </div>
+
+            <!-- weather info  -->
+            <div class="sub-container weather media">
+                <div class="name">
+                    <p city-name></p>
+                    <img country-flag>
+                </div>
+
+                <p weather-type></p>
+                <img weather-img>
+                <p temp></p>
+
+                <div class="weather-info">
+                    <div class="info">
+                        <img src="assets/images/Windy.gif">
+                        <p> WindSpeed</p>
+                        <p wind></p>
+
+                    </div>
+
+                    <div class="info">
+                        <img src="assets/images/humid.gif">
+                        <p> Humidity </p>
+                        <p humid></p>
+                    </div>
+                    <div class="info">
+                        <img src="assets/images/cloud.gif">
+                        <p> Cloudy </p>
+                        <p cloud></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
