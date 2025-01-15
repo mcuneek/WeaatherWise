@@ -16,3 +16,4 @@ HTML: Structure of the web application.
 CSS: Styling and layout using custom styles and Google Fonts.
 JavaScript: Functionality for fetching weather data and managing user interactions.
 OpenWeatherMap API: Source of real-time weather data.
+
